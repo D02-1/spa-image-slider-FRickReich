@@ -6,7 +6,6 @@ import './Slider.scss';
 
 export const Slider = ({ images }) =>
 {
-    const [imageCount, setImageCount] = useState(images.length);
     const [activeImage, setActiveImage] = useState(0);
 
     const handleActiveImageChange = (num) =>
