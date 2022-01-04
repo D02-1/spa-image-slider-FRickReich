@@ -1,0 +1,75 @@
+$idleVisibility: 0.35;
+$hoverVisibility: 0.75;
+$borderRadius: 15px;
+
+.Slider
+{
+    position: relative;
+    width: 700px;
+    border-radius: $borderRadius;
+    overflow: hidden;
+    height: 420px;
+
+    div[class$="Arrow"]
+    {
+        user-select: none;
+        position: absolute;
+        color: white;
+        opacity: $idleVisibility;
+        cursor: pointer;
+        font-size: 256px;
+        top: calc(50% - 150px);
+        line-height: 256px;
+
+        &:hover
+        {
+            opacity: $hoverVisibility;
+        }
+    }
+    .leftArrow
+    {
+        left: 10px;
+    }
+    .rightArrow
+    {
+        right: 10px;
+    }
+
+    .menu
+    {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        width: 100%;
+        bottom: 20px;
+        justify-content: center;
+        gap: 5px;
+
+        .indicator
+        {
+            flex-grow: 0;
+            opacity: $idleVisibility;
+            width: 10px;
+            height: 10px;
+            padding: 0;
+            border-radius: 50%;
+            border: 2px solid white;
+            cursor: pointer;
+            user-select: none;
+
+            &:hover
+            {
+                opacity: $hoverVisibility;
+            }
+
+            &.active
+            {
+                background: white;
+            }
+            &.inactive
+            {
+                background: transparent;
+            }
+        }
+    }
+}
