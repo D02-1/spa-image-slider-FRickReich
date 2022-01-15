@@ -1,0 +1,37 @@
+.Slide
+{
+    img
+    {
+        width: 100%;
+    }
+
+    &.visible
+    {
+        display: block;
+        animation: fadeIn 2s ease-out;
+    }
+    &.hidden
+    {
+        display: none;
+        animation: fadeOut 0 linear;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+}
+  
